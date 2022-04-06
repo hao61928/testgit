@@ -1,5 +1,44 @@
+---添加远程库
+    git remote add origin git@github.com:hao61928/testgit.git
+    --第一次
+    git push -u origin master
+    --第N次
+    git push origin master
+    --查看远程库信息
+    git remote -v
+    --解除本地和远程的绑定关系
+    git remote rm origin
+---版本回退
+    --显示从最近到最远的提交日志
+    git log --pretty=oneline
+    --回退上一个版本
+    git reset --hard HEAD^
+    --回退上上一个版本
+    git reset --hard HEAD^^
+    --回退上100个版本
+    git reset --hard HEAD~100
+    --通过版本号
+    git reset --hard 1094a
+    --记录命令历史
+    git reflog
 
-220331 1611
-220331 1713
-3git
-tag:220401-4
+---添加
+    --添加文件至暂存区
+    git add *.txt
+    --提交修改至当前分支
+    git commit -m ""
+
+---分支
+    --查看分支
+    git branch
+    --创建分支 dev
+    git branch dev
+    --切换分支 dev
+    git checkout dev
+    --创建并切换分支
+    git checkout -b dev
+    --dev合并到master
+    git merge dev
+    --删除分支
+    git branch -d dev
+    
